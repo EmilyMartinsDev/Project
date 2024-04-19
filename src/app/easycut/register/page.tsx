@@ -1,7 +1,7 @@
-import { Box, Flex, Input, Button, Link, Heading } from "@chakra-ui/react";
+import { Box, Flex, Input, Button, Link, Heading, Select } from "@chakra-ui/react";
 import { Center } from "@chakra-ui/react";
 
-function MeuFormulario() {
+function Register() {
     return (
         <Flex color='white' backgroundColor='blue.500' height='100vh' alignItems='center' justifyContent='center'>
             <Box>
@@ -32,6 +32,10 @@ function MeuFormulario() {
                     placeholder='************'
                     mb={6}
                 />
+                <Select     background='gray.200' color={'gray.600'}  placeContent={''}>
+                    <option value='PROVIDER'>Sou Prestador</option>
+                    <option value='CUSTOMER'>Sou Cliente</option>
+                </Select>
                 <Button
 
                     background='yellow.400'
@@ -40,12 +44,13 @@ function MeuFormulario() {
                     size='lg'
                     _hover={{bg: "#ffb13e"}}
                 >
+
                     Acessar
                 </Button>
                 <Center color={'blue.900'} mt={2}>
-                    <Link href='easycut/register'>
+                    <Link href='/register'>
                         <Box>
-                            Ainda não possui uma conta? <strong>Cadastre-se</strong>
+                            Já possui uma conta? <strong>Faça Login!</strong>
                         </Box>
                     </Link>
                 </Center>
@@ -55,4 +60,4 @@ function MeuFormulario() {
     );
 }
 
-export default MeuFormulario;
+export default Register;

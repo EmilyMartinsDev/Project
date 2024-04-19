@@ -93,8 +93,8 @@ function Calendar() {
   ];
 
   return (
-    <Box p={4}>
-      <Flex w={'100%'} gap={8} justifyContent={'center'} maxW={'960px'}>
+    <Box  w={'100%'} maxW={'1024px'} my={0} mx={'auto'}>
+      <Flex w={'100%'}  >
         <Box>
           <Text>Profissional:</Text>
           <Select w={'md'} placeholder="Selecione">
@@ -125,8 +125,8 @@ function Calendar() {
         <IconButton icon={<ChevronRightIcon />} h={'28px'} display={'flex'} backgroundColor={'gray.200'} ml={'80px'} onClick={goToNextMonth} aria-label="Next Month" />
       </Flex>
 
-      <Flex justifyContent={'space-between'} gap={'16px'}>
-        <Grid maxWidth={1024} justifyContent="center" templateColumns="repeat(7, 1fr)" gap={2}>
+      <Flex justifyContent={'space-a'} gap={'16px'}>
+        <Grid  justifyContent="center" templateColumns="repeat(7, 1fr)" gap={2}>
           {["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"].map((day, index) => (
             <GridItem key={index} textAlign="center" color="gray.700" fontSize={'16px'} fontWeight="bold">{day}</GridItem>
           ))}
@@ -139,10 +139,10 @@ function Calendar() {
               alignItems="center"
               cursor="pointer"
               borderRadius="md"
-              border="2px solid"
+              border="1px solid"
               borderColor="gray.300"
-              width="104px"
-              height="80px"
+              width="88px"
+              height="72px"
               _hover={{ bg: "gray.300", color: "gray.800" }}
               onClick={() => {
                 isOpenBook(Number(day));
