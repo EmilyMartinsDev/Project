@@ -4,6 +4,7 @@ import './globals.css'
 import { Providers } from "./providers";
 import { fonts } from "./fonts";
 import { extendTheme } from "@chakra-ui/react";
+import { AuthProvider } from "@/contexts/AuthContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -38,8 +39,9 @@ export default function RootLayout({
   return (
     <html lang='en' className={fonts.catamaran.variable}>
     <body>
-      
+    <AuthProvider>
       <Providers>{children}</Providers>
+    </AuthProvider>
     </body>
   </html>
   );
